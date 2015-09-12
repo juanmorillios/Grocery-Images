@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		B9A7D8E01BA4667700C09804 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A7D8DF1BA4667700C09804 /* AppDelegate.swift */; };
-		B9A7D8E21BA4667800C09804 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A7D8E11BA4667800C09804 /* ViewController.swift */; };
 		B9A7D8E51BA4667900C09804 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9A7D8E31BA4667900C09804 /* Main.storyboard */; };
 		B9A7D8E81BA4667900C09804 /* Grocery_Images.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9A7D8E61BA4667900C09804 /* Grocery_Images.xcdatamodeld */; };
 		B9A7D8EA1BA4667900C09804 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9A7D8E91BA4667900C09804 /* Assets.xcassets */; };
 		B9A7D8ED1BA4667900C09804 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9A7D8EB1BA4667900C09804 /* LaunchScreen.storyboard */; };
 		B9A7D8F81BA4667C00C09804 /* Grocery_ImagesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A7D8F71BA4667C00C09804 /* Grocery_ImagesTests.swift */; };
 		B9A7D9031BA4667C00C09804 /* Grocery_ImagesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A7D9021BA4667C00C09804 /* Grocery_ImagesUITests.swift */; };
+		B9A7D9191BA467F800C09804 /* Items+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A7D9171BA467F800C09804 /* Items+CoreDataProperties.swift */; };
+		B9A7D91A1BA467F800C09804 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A7D9181BA467F800C09804 /* Items.swift */; };
+		B9A7D9221BA46AE400C09804 /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A7D9211BA46AE400C09804 /* AddEditViewController.swift */; };
+		B9A7D9241BA46C9100C09804 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A7D9231BA46C9100C09804 /* MainTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,6 @@
 /* Begin PBXFileReference section */
 		B9A7D8DC1BA4667600C09804 /* Grocery-Images.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grocery-Images.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9A7D8DF1BA4667700C09804 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B9A7D8E11BA4667800C09804 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B9A7D8E41BA4667900C09804 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9A7D8E71BA4667900C09804 /* Grocery_Images.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Grocery_Images.xcdatamodel; sourceTree = "<group>"; };
 		B9A7D8E91BA4667900C09804 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,11 @@
 		B9A7D8FE1BA4667C00C09804 /* Grocery-ImagesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Grocery-ImagesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9A7D9021BA4667C00C09804 /* Grocery_ImagesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grocery_ImagesUITests.swift; sourceTree = "<group>"; };
 		B9A7D9041BA4667C00C09804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9A7D9101BA4679900C09804 /* Grocery-Images-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Grocery-Images-Bridging-Header.h"; sourceTree = "<group>"; };
+		B9A7D9171BA467F800C09804 /* Items+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Items+CoreDataProperties.swift"; path = "../Items+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B9A7D9181BA467F800C09804 /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Items.swift; path = ../Items.swift; sourceTree = "<group>"; };
+		B9A7D9211BA46AE400C09804 /* AddEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
+		B9A7D9231BA46C9100C09804 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +90,7 @@
 				B9A7D8F61BA4667B00C09804 /* Grocery-ImagesTests */,
 				B9A7D9011BA4667C00C09804 /* Grocery-ImagesUITests */,
 				B9A7D8DD1BA4667600C09804 /* Products */,
+				B9A7D9101BA4679900C09804 /* Grocery-Images-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,12 +108,15 @@
 			isa = PBXGroup;
 			children = (
 				B9A7D8DF1BA4667700C09804 /* AppDelegate.swift */,
-				B9A7D8E11BA4667800C09804 /* ViewController.swift */,
+				B9A7D9181BA467F800C09804 /* Items.swift */,
+				B9A7D9171BA467F800C09804 /* Items+CoreDataProperties.swift */,
 				B9A7D8E31BA4667900C09804 /* Main.storyboard */,
 				B9A7D8E91BA4667900C09804 /* Assets.xcassets */,
 				B9A7D8EB1BA4667900C09804 /* LaunchScreen.storyboard */,
 				B9A7D8EE1BA4667900C09804 /* Info.plist */,
 				B9A7D8E61BA4667900C09804 /* Grocery_Images.xcdatamodeld */,
+				B9A7D9211BA46AE400C09804 /* AddEditViewController.swift */,
+				B9A7D9231BA46C9100C09804 /* MainTableViewController.swift */,
 			);
 			path = "Grocery-Images";
 			sourceTree = "<group>";
@@ -190,6 +201,7 @@
 		B9A7D8D41BA4667500C09804 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = JuanMorillios;
 				TargetAttributes = {
@@ -258,8 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9A7D8E21BA4667800C09804 /* ViewController.swift in Sources */,
+				B9A7D91A1BA467F800C09804 /* Items.swift in Sources */,
+				B9A7D9221BA46AE400C09804 /* AddEditViewController.swift in Sources */,
 				B9A7D8E81BA4667900C09804 /* Grocery_Images.xcdatamodeld in Sources */,
+				B9A7D9191BA467F800C09804 /* Items+CoreDataProperties.swift in Sources */,
+				B9A7D9241BA46C9100C09804 /* MainTableViewController.swift in Sources */,
 				B9A7D8E01BA4667700C09804 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,10 +417,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Grocery-Images/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.juanmorillios.Grocery-Images";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Grocery-Images-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -413,10 +431,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Grocery-Images/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.juanmorillios.Grocery-Images";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Grocery-Images-Bridging-Header.h";
 			};
 			name = Release;
 		};
