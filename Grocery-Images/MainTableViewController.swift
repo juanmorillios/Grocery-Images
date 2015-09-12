@@ -7,8 +7,25 @@
 //
 
 import UIKit
+import CoreData
 
-class MainTableViewController: UITableViewController {
+class MainTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+    
+    let dat = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    
+    var nsf : NSFetchedResultsController = NSFetchedResultsController()
+    
+    func fetchRequest() -> NSFetchRequest{
+    
+    
+        let fectchRequest = NSFetchRequest(entityName: "Item")
+        let shortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        fectchRequest.sortDescriptors = [shortDescriptor]
+        
+        return fectchRequest
+    
+    
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +33,7 @@ class MainTableViewController: UITableViewController {
       
         self.tableView.rowHeight = 60
         self.tableView.backgroundView = UIImageView(image:UIImage(named:"bg.png"))
+        self.tableView.reloadData()
         
         
     }
@@ -54,7 +72,7 @@ class MainTableViewController: UITableViewController {
     }
     */
 
-    /*
+  /*
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
@@ -64,7 +82,7 @@ class MainTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+  */
 
     /*
     // Override to support rearranging the table view.
