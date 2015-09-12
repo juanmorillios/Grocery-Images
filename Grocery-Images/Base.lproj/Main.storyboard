@@ -13,12 +13,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="FNJ-e7-4N6" customClass="cell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="rbX-NH-ZHL" detailTextLabel="WTZ-xf-8mw" imageView="pWP-l5-ecz" style="IBUITableViewCellStyleSubtitle" id="FNJ-e7-4N6" customClass="cell">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FNJ-e7-4N6" id="DUH-qf-EEq">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" tableViewCell="FNJ-e7-4N6" id="DUH-qf-EEq">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rbX-NH-ZHL">
+                                            <rect key="frame" x="73" y="5" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WTZ-xf-8mw">
+                                            <rect key="frame" x="73" y="25" width="41" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="cart" id="pWP-l5-ecz">
+                                            <rect key="frame" x="15" y="0.0" width="43" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="edit" id="Ki7-3X-gyO"/>
@@ -30,13 +50,19 @@
                             <outlet property="delegate" destination="YtG-wQ-LUh" id="BwB-me-1jI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Grocery List" id="LMn-Zz-A2Q"/>
+                    <navigationItem key="navigationItem" title="Grocery List" id="LMn-Zz-A2Q">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3bj-eM-W0D">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="add" id="yPk-bq-Pq5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohg-0v-BHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="450" y="339"/>
         </scene>
-        <!--Add Edit View Controller-->
+        <!--Add / Edit List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AddEditViewController" customModule="Grocery_Images" customModuleProvider="target" sceneMemberID="viewController">
@@ -47,8 +73,48 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Note" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vhy-PK-4y0">
+                                <rect key="frame" x="20" y="110" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P9l-TF-aBc">
+                                <rect key="frame" x="20" y="148" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcR-rk-9CK">
+                                <rect key="frame" x="7" y="195" width="356" height="30"/>
+                                <state key="normal" title="Add / Edit Image From Device"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBz-Lo-Yya">
+                                <rect key="frame" x="7" y="233" width="356" height="30"/>
+                                <state key="normal" title="Add / Edit Image From Camera"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addImage" translatesAutoresizingMaskIntoConstraints="NO" id="fM4-SR-clV">
+                                <rect key="frame" x="180" y="321" width="240" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="QpT-9u-gL7"/>
+                                    <constraint firstAttribute="height" constant="200" id="rDg-gb-AKa"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pCa-cV-NK7">
+                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fM4-SR-clV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dcs-5a-a0i"/>
+                            <constraint firstItem="fM4-SR-clV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="121" id="hcq-oL-uHi"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Add / Edit List" id="XCf-Rn-2SG">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="TyX-wQ-Med"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="qEj-3W-RgH"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,4 +139,11 @@
             <point key="canvasLocation" x="-362" y="339"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="addImage" width="256" height="256"/>
+        <image name="cart" width="256" height="256"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="yPk-bq-Pq5"/>
+    </inferredMetricsTieBreakers>
 </document>
